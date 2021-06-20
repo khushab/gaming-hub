@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 //styling and animation
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -18,9 +19,11 @@ const Game = ({ game }) => {
   return (
     <div>
       <StyledGame onClick={loadDetailHandler}>
-        <h3>{game.name}</h3>
-        <p>{game.released}</p>
-        <img src={game.background_image} alt={game.name} />
+        <Link to={`/game/${game.id}`}>
+          <h3>{game.name}</h3>
+          <p>{game.released}</p>
+          <img src={game.background_image} alt={game.name} />
+        </Link>
       </StyledGame>
     </div>
   );
@@ -32,6 +35,7 @@ const StyledGame = styled(motion.div)`
   min-height: 30vh;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
+  cursor: pointer;
   img {
     width: 100%;
     height: 50vh;
