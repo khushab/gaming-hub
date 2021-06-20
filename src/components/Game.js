@@ -13,7 +13,7 @@ const Game = ({ game }) => {
   const dispatch = useDispatch();
   const loadDetailHandler = () => {
     document.body.style.overflow = "hidden";
-    dispatch(loadDetail(game.id));
+    dispatch(loadDetail(stringPathId));
   };
 
   return (
@@ -36,6 +36,8 @@ const StyledGame = styled(motion.div)`
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 1rem;
   img {
     width: 100%;
     height: 50vh;
