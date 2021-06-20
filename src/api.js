@@ -15,8 +15,14 @@ const getCurrentMonth = () => {
 const getCurrentDay = () => {
   const day = new Date().getDay();
   if (day < 10) {
+    if (day == 0) {
+      console.log(`07`);
+      return `07`;
+    }
+    console.log(`0${day}`);
     return `0${day}`;
   } else {
+    console.log(day);
     return day;
   }
 };
@@ -47,3 +53,5 @@ export const gameScreenshotURL = (game_id) =>
 //Searched game
 export const searchGameURL = (game_name) =>
   `${base_url}games?key=${process.env.REACT_APP_API_KEY}?search=${game_name}&page_size=9`;
+
+console.log(popularGamesURL());

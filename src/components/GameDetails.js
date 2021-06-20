@@ -11,35 +11,33 @@ const GameDetails = () => {
   //   console.log(detail);
   return (
     <CardShadow>
-      {game && (
-        <Detail>
-          <div className="stats">
-            <div className="ratings">
-              <h3>{game.name}</h3>
-              <p>Rating: {game.rating}</p>
-            </div>
-            <div className="info">
-              <h3>Platforms</h3>
-              <div className="platforms">
-                {game.platforms.map((data) => (
-                  <h3 key={data.platform.id}>{data.platform.name}</h3>
-                ))}
-              </div>
-            </div>
+      <Detail>
+        <Stats>
+          <div className="ratings">
+            <h3>{game.name}</h3>
+            <p>Rating: {game.rating}</p>
           </div>
-          <div className="media">
-            <img src={game.background_image} alt={game.name} />
-          </div>
-          <div className="description">
-            <p>{game.description_raw}</p>
-          </div>
-          <div className="gallery">
-            {screen.results.map((screen) => (
-              <img src={screen.image} alt={screen.id} key={screen.id} />
-            ))}
-          </div>
-        </Detail>
-      )}
+          <Info>
+            <h3>Platforms</h3>
+            <Platforms>
+              {game.platforms.map((data) => (
+                <h3 key={data.platform.id}>{data.platform.name}</h3>
+              ))}
+            </Platforms>
+          </Info>
+        </Stats>
+        <Media>
+          <img src={game.background_image} alt={game.name} />
+        </Media>
+        <Description>
+          <p>{game.description_raw}</p>
+        </Description>
+        <div className="gallery">
+          {screen.results.map((screen) => (
+            <img src={screen.image} alt={screen.id} key={screen.id} />
+          ))}
+        </div>
+      </Detail>
     </CardShadow>
   );
 };
@@ -68,7 +66,7 @@ const CardShadow = styled(motion.div)`
 const Detail = styled(motion.div)`
   width: 80%;
   border-radius: 1rem;
-  padding: 2rem 20rem;
+  padding: 2rem 5rem;
   background: white;
   position: absolute;
   left: 10%;
@@ -76,4 +74,38 @@ const Detail = styled(motion.div)`
   img {
     width: 100%;
   }
+  .gallery {
+    img {
+      padding: 1rem 0rem;
+    }
+  }
+`;
+
+const Stats = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const Info = styled(motion.div)`
+  text-align: center;
+`;
+
+const Platforms = styled(motion.div)`
+  display: flex;
+  justify-content: space-evenly;
+  img {
+    margin-left: 3rem;
+  }
+`;
+
+const Media = styled(motion.div)`
+  margin-top: 5rem;
+  img {
+    width: 100%;
+  }
+`;
+
+const Description = styled(motion.div)`
+  margin: 5rem 0rem 4rem 0rem;
 `;

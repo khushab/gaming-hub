@@ -13,6 +13,7 @@ const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadGames());
+    console.log("abc");
   }, [dispatch]);
 
   //Get data from state
@@ -20,7 +21,7 @@ const Home = () => {
 
   return (
     <GameList>
-      {/* <GameDetails /> */}
+      <GameDetails />
       <h2>Upcoming Games</h2>
       <Games>
         {upcoming.map((game) => (
