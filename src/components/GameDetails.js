@@ -86,7 +86,7 @@ const CardShadow = styled(motion.div)`
     align-items: center;
     justify-content: center;
     h1 {
-      color: #ffd2d2;
+      color: #ff9191;
       background: ;
     }
   }
@@ -96,6 +96,7 @@ const Detail = styled(motion.div)`
   width: 80%;
   border-radius: 1rem;
   padding: 2rem 5rem;
+  margin: 1rem 0rem;
   background: white;
   position: absolute;
   left: 10%;
