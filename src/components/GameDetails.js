@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 //redux
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { smallImage } from "../utils";
 
 const GameDetails = () => {
   const history = useHistory();
@@ -24,7 +25,7 @@ const GameDetails = () => {
       <CardShadow className="shadow" onClick={exitDetailHandler}>
         {isLoading && (
           <div className="loading">
-            <h1>Loading....</h1>
+            <h3>Loading....</h3>
           </div>
         )}
         {!isLoading && (
@@ -44,14 +45,21 @@ const GameDetails = () => {
               </Info>
             </Stats>
             <Media>
-              <img src={game.background_image} alt={game.name} />
+              <img
+                src={smallImage(game.background_image, 1280)}
+                alt={game.name}
+              />
             </Media>
             <Description>
               <p>{game.description_raw}</p>
             </Description>
             <div className="gallery">
               {screen.results.map((screen) => (
-                <img src={screen.image} alt={screen.id} key={screen.id} />
+                <img
+                  src={smallImage(screen.image, 1280)}
+                  alt={screen.id}
+                  key={screen.id}
+                />
               ))}
             </div>
           </Detail>
@@ -85,7 +93,7 @@ const CardShadow = styled(motion.div)`
     display: flex;
     align-items: center;
     justify-content: center;
-    h1 {
+    h3 {
       color: #ff9191;
       background: ;
     }
