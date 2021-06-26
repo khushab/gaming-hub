@@ -59,6 +59,7 @@ const GameList = styled(motion.div)`
   }
   @media screen and (max-width: 800px) {
     padding: 0rem 1rem;
+    padding-bottom: 2rem;
     h2 {
       text-align: center;
       padding: 2rem 0rem;
