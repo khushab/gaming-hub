@@ -34,7 +34,7 @@ export default Game;
 
 const StyledGame = styled(motion.div)`
   min-height: 30vh;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
   cursor: pointer;
   overflow: hidden;
