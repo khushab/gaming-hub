@@ -6,6 +6,14 @@ import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { smallImage } from "../utils";
+//images
+import playstation from "../img/playstation.svg";
+import steam from "../img/steam.svg";
+import xbox from "../img/xbox.svg";
+import nintendo from "../img/nintendo.svg";
+import apple from "../img/apple.svg";
+import gamepad from "../img/gamepad.svg";
+import threedots from "../img/three-dots.svg";
 
 const GameDetails = () => {
   const history = useHistory();
@@ -17,6 +25,30 @@ const GameDetails = () => {
       history.push("/");
     }
   };
+
+  //get platform images
+  const getPlatform = (platform) => {
+    switch (platform) {
+      case "PlayStation 4":
+        return playstation;
+
+      case "Xbox One":
+        return xbox;
+
+      case "PC":
+        return steam;
+
+      case "Nintendo Switch":
+        return nintendo;
+
+      case "iOS":
+        return apple;
+
+      default:
+        return gamepad;
+    }
+  };
+
   //Data
   const { game, screen, isLoading } = useSelector((state) => state.detail);
   //   console.log(detail);
@@ -25,7 +57,8 @@ const GameDetails = () => {
       <CardShadow className="shadow" onClick={exitDetailHandler}>
         {isLoading && (
           <div className="loading">
-            <h3>Loading....</h3>
+            {/* <h3>Loading....</h3> */}
+            <img src={threedots} alt="loading" />
           </div>
         )}
         {!isLoading && (
@@ -39,7 +72,11 @@ const GameDetails = () => {
                 <h3>Platforms</h3>
                 <Platforms>
                   {game.platforms.map((data) => (
-                    <h3 key={data.platform.id}>{data.platform.name}</h3>
+                    <img
+                      key={data.platform.id}
+                      alt={data.platform.name}
+                      src={getPlatform(data.platform.name)}
+                    />
                   ))}
                 </Platforms>
               </Info>
@@ -84,6 +121,7 @@ const CardShadow = styled(motion.div)`
   }
   &::-webkit-scrollbar-thumb {
     background-color: #ff7676;
+    border-radius: 0.2rem;
   }
   &::-webkit-scrollbar-track {
     background: white;
@@ -93,9 +131,9 @@ const CardShadow = styled(motion.div)`
     display: flex;
     align-items: center;
     justify-content: center;
-    h3 {
-      color: #ff9191;
-      background: ;
+    color: #ff9191;
+    img {
+      width: 60px;
     }
   }
 `;
