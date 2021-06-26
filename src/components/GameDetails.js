@@ -79,9 +79,9 @@ const GameDetails = () => {
         )}
         {!isLoading && (
           <Detail>
+            <h3 className="name">{game.name}</h3>
             <Stats>
               <div className="ratings">
-                <h3>{game.name}</h3>
                 <p>Rating: {game.rating}</p>
                 {getStars()}
               </div>
@@ -172,6 +172,18 @@ const Detail = styled(motion.div)`
       padding: 1rem 0rem;
     }
   }
+  @media screen and (max-width: 800px) {
+    padding: 1rem;
+    .name {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .gallery {
+      img {
+        padding: 0.2rem 0rem;
+      }
+    }
+  }
 `;
 
 const Stats = styled(motion.div)`
@@ -181,6 +193,11 @@ const Stats = styled(motion.div)`
   img {
     width: 2rem;
     display: inline;
+  }
+  @media screen and (max-width: 800px) {
+    img {
+      width: 0.8rem;
+    }
   }
 `;
 
@@ -194,6 +211,12 @@ const Platforms = styled(motion.div)`
   img {
     margin-left: 3rem;
   }
+  @media screen and (max-width: 800px) {
+    img {
+      margin-left: 0.5rem;
+      width: 1.2rem;
+    }
+  }
 `;
 
 const Media = styled(motion.div)`
@@ -201,8 +224,14 @@ const Media = styled(motion.div)`
   img {
     width: 100%;
   }
+  @media screen and (max-width: 900px) {
+    margin-top: 1rem;
+  }
 `;
 
 const Description = styled(motion.div)`
   margin: 5rem 0rem 4rem 0rem;
+  @media screen and (max-width: 800px) {
+    margin: 1rem 0rem;
+  }
 `;

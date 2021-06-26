@@ -24,16 +24,27 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Montserrat', sans-serif;
         font-weight: medium;
         color: #ff7676;
+        @media screen and (max-width: 800px){
+            font-size: 1rem;
+        }
     }
     h3{
         font-size: 1.3rem;
         color: #333;
         padding: 1rem 0rem;
+        @media screen and (max-width: 800px){
+            font-size: 1rem;
+            padding: 0.7rem;
+        }
     }
     P{
         font-size: 1.2rem;
         line-height: 200%;
         color: #696969;
+        @media screen and (max-width: 800px){
+            font-size: 0.8rem;
+            line-height: 150%;
+        }
     }
     a{
         text-decoration: none;
