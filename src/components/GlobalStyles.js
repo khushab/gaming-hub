@@ -19,6 +19,10 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Montserrat', sans-serif;
         width:100%;
     }
+    input{
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+    }
     h2{
         font-size: 3rem;
         font-family: 'Montserrat', sans-serif;
