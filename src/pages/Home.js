@@ -34,7 +34,7 @@ const Home = () => {
       {pathId && <GameDetails />}
       {searched.length ? (
         <div className="searched-games">
-          <h2>Search results</h2>
+          <h2>Searched results</h2>
           <Games>
             {searched.map((game) => (
               <Game game={game} id={game.id} key={game.id} />
