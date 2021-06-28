@@ -34,6 +34,9 @@ const GameDetails = () => {
       case "PlayStation 4":
         return playstation;
 
+      case "PlayStation 5":
+        return playstation;
+
       case "Xbox One":
         return xbox;
 
@@ -73,7 +76,6 @@ const GameDetails = () => {
       <CardShadow className="shadow" onClick={exitDetailHandler}>
         {isLoading && (
           <div className="loading">
-            {/* <h3>Loading....</h3> */}
             <img src={threedots} alt="loading" />
           </div>
         )}
