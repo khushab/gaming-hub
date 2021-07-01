@@ -1,7 +1,7 @@
 https://khushab.github.io/gaming-hub/
 <h1>Gaming Hub</h1>
 
-This is a website where you can check out all the games. It was created using React JS.
+This is a website where you can check out all the games. It was created using React JS and Redux.
 
 Features :
 1. Fetched the games data from an API provided by rawg.io.
