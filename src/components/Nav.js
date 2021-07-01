@@ -64,6 +64,8 @@ const StyledNav = styled(motion.nav)`
     background: #ff7676;
     color: white;
     transition: 0.3s ease;
+    border-radius: 5px;
+    margin-left: 10px;
     &:hover {
       opacity: 0.9;
     }
