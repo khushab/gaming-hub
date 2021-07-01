@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/gaming-hub/static/js/main.1b5bd064.chunk.js",
-    "main.js.map": "/gaming-hub/static/js/main.1b5bd064.chunk.js.map",
+    "main.js": "/gaming-hub/static/js/main.5ba11bdf.chunk.js",
+    "main.js.map": "/gaming-hub/static/js/main.5ba11bdf.chunk.js.map",
     "runtime-main.js": "/gaming-hub/static/js/runtime-main.75a92de1.js",
     "runtime-main.js.map": "/gaming-hub/static/js/runtime-main.75a92de1.js.map",
     "static/js/2.92878071.chunk.js": "/gaming-hub/static/js/2.92878071.chunk.js",
@@ -23,6 +23,6 @@
   "entrypoints": [
     "static/js/runtime-main.75a92de1.js",
     "static/js/2.92878071.chunk.js",
-    "static/js/main.1b5bd064.chunk.js"
+    "static/js/main.5ba11bdf.chunk.js"
   ]
 }
