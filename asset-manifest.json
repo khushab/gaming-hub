@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.js": "/gaming-hub/static/js/main.1b5bd064.chunk.js",
+    "main.js.map": "/gaming-hub/static/js/main.1b5bd064.chunk.js.map",
+    "runtime-main.js": "/gaming-hub/static/js/runtime-main.75a92de1.js",
+    "runtime-main.js.map": "/gaming-hub/static/js/runtime-main.75a92de1.js.map",
+    "static/js/2.92878071.chunk.js": "/gaming-hub/static/js/2.92878071.chunk.js",
+    "static/js/2.92878071.chunk.js.map": "/gaming-hub/static/js/2.92878071.chunk.js.map",
+    "static/js/3.ad946c45.chunk.js": "/gaming-hub/static/js/3.ad946c45.chunk.js",
+    "static/js/3.ad946c45.chunk.js.map": "/gaming-hub/static/js/3.ad946c45.chunk.js.map",
+    "index.html": "/gaming-hub/index.html",
+    "static/js/2.92878071.chunk.js.LICENSE.txt": "/gaming-hub/static/js/2.92878071.chunk.js.LICENSE.txt",
+    "static/media/apple.aed8126a.svg": "/gaming-hub/static/media/apple.aed8126a.svg",
+    "static/media/gamepad.98eab601.svg": "/gaming-hub/static/media/gamepad.98eab601.svg",
+    "static/media/gh1.e48156b5.png": "/gaming-hub/static/media/gh1.e48156b5.png",
+    "static/media/nintendo.a909be56.svg": "/gaming-hub/static/media/nintendo.a909be56.svg",
+    "static/media/playstation.4bbb4079.svg": "/gaming-hub/static/media/playstation.4bbb4079.svg",
+    "static/media/steam.840878ac.svg": "/gaming-hub/static/media/steam.840878ac.svg",
+    "static/media/tail-spin.52505b00.svg": "/gaming-hub/static/media/tail-spin.52505b00.svg",
+    "static/media/three-dots.750be426.svg": "/gaming-hub/static/media/three-dots.750be426.svg",
+    "static/media/xbox.63a50e86.svg": "/gaming-hub/static/media/xbox.63a50e86.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.75a92de1.js",
+    "static/js/2.92878071.chunk.js",
+    "static/js/main.1b5bd064.chunk.js"
+  ]
+}
