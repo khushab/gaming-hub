@@ -9,6 +9,7 @@ import GameDetails from "../components/GameDetails";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import tailSpin from "../img/tail-spin.svg";
 
 const Home = () => {
   const location = useLocation();
@@ -46,29 +47,57 @@ const Home = () => {
       )}
 
       <h2>Upcoming Games</h2>
-      <Games>
-        {upcoming.map((game) => (
-          <Game game={game} id={game.id} key={game.id} />
-        ))}
-      </Games>
+      {upcoming.length ? (
+        <Games>
+          {upcoming.map((game) => (
+            <Game game={game} id={game.id} key={game.id} />
+          ))}
+        </Games>
+      ) : (
+        <Loading>
+          <img src={tailSpin} alt="loading" />
+        </Loading>
+      )}
 
       <h2>Popular Games</h2>
-      <Games>
-        {popular.map((game) => (
-          <Game game={game} id={game.id} key={game.id} />
-        ))}
-      </Games>
+      {popular.length ? (
+        <Games>
+          {popular.map((game) => (
+            <Game game={game} id={game.id} key={game.id} />
+          ))}
+        </Games>
+      ) : (
+        <Loading>
+          <img src={tailSpin} alt="loading" />
+        </Loading>
+      )}
+
       <h2>New Games</h2>
-      <Games>
-        {newGames.map((game) => (
-          <Game game={game} id={game.id} key={game.id} />
-        ))}
-      </Games>
+      {newGames.length ? (
+        <Games>
+          {newGames.map((game) => (
+            <Game game={game} id={game.id} key={game.id} />
+          ))}
+        </Games>
+      ) : (
+        <Loading>
+          <img src={tailSpin} alt="loading" />
+        </Loading>
+      )}
     </GameList>
   );
 };
 
 export default Home;
+
+const Loading = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 20%;
+  }
+`;
 
 const GameList = styled(motion.div)`
   padding: 0rem 5rem;
