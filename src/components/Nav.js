@@ -70,13 +70,13 @@ const StyledNav = styled(motion.nav)`
   }
   @media screen and (max-width: 900px) {
     input {
-      width: 50%;
-      padding: 0.3rem;
-      font-size: 0.8rem;
+      width: 70%;
+      padding: 0.5rem;
+      font-size: 1rem;
     }
     button {
-      font-size: 0.8rem;
-      padding: 0.3rem 1rem;
+      font-size: 1rem;
+      padding: 9px 16px;
     }
   }
 `;
