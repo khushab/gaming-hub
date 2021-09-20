@@ -1,4 +1,4 @@
-https://khushab.github.io/gaming-hub/
+Live: https://khushab.github.io/gaming-hub/
 <h1>Gaming Hub</h1>
 
 This is a website where you can check out all the games. It was created using React JS and Redux.
